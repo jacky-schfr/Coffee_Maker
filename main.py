@@ -23,7 +23,7 @@ size = (WIDTH, HEIGHT)
 screen = pygame.display.set_mode(size)
 pygame.display.set_caption("Coffee-Maker")
 
-carryOn = True
+run = True
 
 clock = pygame.time.Clock()
 
@@ -50,7 +50,7 @@ start_txt = InputBox(50, 90, 'COFFEE', 40)
 stop_txt = InputBox(633, 90, 'RESTART', 40)
 foam_text = InputBox(320, 90, 'MILK-FOAM', 35)
 
-while carryOn:
+while run:
     coffee_fill1 = 660 - coffee_value
     coffee_fill2 = 0 + coffee_value
 
@@ -72,7 +72,7 @@ while carryOn:
     ev = pygame.event.get()
     for event in ev:
         if event.type == pygame.QUIT:
-            carryOn = False
+            run = False
         if event.type == pygame.MOUSEBUTTONUP:
             pos = pygame.mouse.get_pos()
 
